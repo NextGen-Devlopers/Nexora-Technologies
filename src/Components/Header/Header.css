@@ -1,0 +1,65 @@
+/* nav */
+.nav {
+  background: var(--navy);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  border-bottom: 1px solid #1b2740;
+}
+.nav .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 76px;
+}
+.nav ul {
+  display: flex;
+  gap: 30px;
+  list-style: none;
+}
+.nav ul a {
+  color: #c7d2e5;
+  font-weight: 600;
+  font-size: 15px;
+  padding: 6px 0;
+  border-bottom: 2px solid transparent;
+}
+.nav ul a.active {
+  color: #fff;
+  border-color: var(--cyan);
+}
+.nav .logo img {
+  height: 38px;
+}
+/* buttons */
+.btn {
+  display: inline-block;
+  padding: 13px 26px;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 15px;
+  border: 2px solid transparent;
+  cursor: pointer;
+  font-family: inherit;
+}
+.btn-primary {
+  background: var(--blue);
+  color: #fff;
+  box-shadow: 0 8px 20px -8px rgba(21, 94, 239, 0.7);
+}
+.btn-ghost {
+  border-color: #3a4a6b;
+  color: #fff;
+}
+.btn-outline {
+  border-color: var(--blue);
+  color: var(--blue);
+}
+.btn-cyan {
+  background: var(--cyan);
+  color: var(--navy);
+}
+.btn-sm {
+  padding: 9px 20px;
+  font-size: 14px;
+}

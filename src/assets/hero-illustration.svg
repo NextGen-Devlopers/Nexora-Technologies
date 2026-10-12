@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 560" width="720" height="560">
+<defs>
+<radialGradient id="glow" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#22D3EE" stop-opacity=".45"/><stop offset="1" stop-color="#22D3EE" stop-opacity="0"/></radialGradient>
+<linearGradient id="b" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#22D3EE"/><stop offset="1" stop-color="#155EEF"/></linearGradient>
+<linearGradient id="s" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#155EEF"/><stop offset="1" stop-color="#22D3EE"/></linearGradient>
+</defs>
+<circle cx="360" cy="280" r="270" fill="url(#glow)"/>
+<g stroke="#2A3A5C" stroke-width="1" opacity=".7"><line x1="60" y1="40" x2="60" y2="520"/><line x1="120" y1="40" x2="120" y2="520"/><line x1="180" y1="40" x2="180" y2="520"/><line x1="240" y1="40" x2="240" y2="520"/><line x1="300" y1="40" x2="300" y2="520"/><line x1="360" y1="40" x2="360" y2="520"/><line x1="420" y1="40" x2="420" y2="520"/><line x1="480" y1="40" x2="480" y2="520"/><line x1="540" y1="40" x2="540" y2="520"/><line x1="600" y1="40" x2="600" y2="520"/><line x1="660" y1="40" x2="660" y2="520"/><line x1="20" y1="60" x2="700" y2="60"/><line x1="20" y1="120" x2="700" y2="120"/><line x1="20" y1="180" x2="700" y2="180"/><line x1="20" y1="240" x2="700" y2="240"/><line x1="20" y1="300" x2="700" y2="300"/><line x1="20" y1="360" x2="700" y2="360"/><line x1="20" y1="420" x2="700" y2="420"/><line x1="20" y1="480" x2="700" y2="480"/></g>
+<rect x="30" y="70" width="330" height="290" rx="22" fill="#111C33" stroke="#2F4372"/>
+<circle cx="56" cy="96" r="6" fill="#FF6B6B"/><circle cx="78" cy="96" r="6" fill="#FFC857"/><circle cx="100" cy="96" r="6" fill="#4ADE80"/>
+<text x="56" y="140" font-family="Arial" font-size="15" fill="#9FB3D9">Deployments this quarter</text>
+<rect x="60" y="240" width="26" height="60" rx="6" fill="url(#b)"/><rect x="104" y="200" width="26" height="100" rx="6" fill="url(#b)"/><rect x="148" y="220" width="26" height="80" rx="6" fill="url(#b)"/><rect x="192" y="160" width="26" height="140" rx="6" fill="url(#b)"/><rect x="236" y="180" width="26" height="120" rx="6" fill="url(#b)"/><rect x="280" y="130" width="26" height="170" rx="6" fill="url(#b)"/>
+<rect x="380" y="70" width="290" height="290" rx="22" fill="#0F172A" stroke="#2F4372"/>
+<circle cx="404" cy="96" r="5" fill="#2F4372"/><circle cx="422" cy="96" r="5" fill="#2F4372"/>
+<rect x="400" y="110" width="90" height="9" rx="4.5" fill="#22D3EE" opacity=".85"/><rect x="400" y="132" width="150" height="9" rx="4.5" fill="#7AA7FF" opacity=".85"/><rect x="420" y="154" width="110" height="9" rx="4.5" fill="#fff" opacity=".85"/><rect x="420" y="176" width="170" height="9" rx="4.5" fill="#7AA7FF" opacity=".85"/><rect x="420" y="198" width="70" height="9" rx="4.5" fill="#22D3EE" opacity=".85"/><rect x="400" y="220" width="130" height="9" rx="4.5" fill="#fff" opacity=".85"/><rect x="400" y="242" width="100" height="9" rx="4.5" fill="#7AA7FF" opacity=".85"/>
+<g transform="translate(470 330)">
+<path d="M0 0c60 0 110 20 110 90 0 70-60 120-110 150C-50 210-110 160-110 90-110 20-60 0 0 0z" transform="scale(.62)" fill="url(#s)" stroke="#fff" stroke-opacity=".5" stroke-width="3"/>
+<polyline points="-30,52 -8,76 38,28" fill="none" stroke="#fff" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<rect x="60" y="400" width="220" height="86" rx="18" fill="#fff"/>
+<text x="84" y="436" font-family="Arial" font-size="13" fill="#667085">Uptime</text>
+<text x="84" y="470" font-family="Arial" font-size="30" font-weight="700" fill="#0B1220">99.98%</text>
+<rect x="300" y="420" width="130" height="66" rx="16" fill="#155EEF"/>
+<text x="322" y="450" font-family="Arial" font-size="12" fill="#CFE0FF">Threats blocked</text>
+<text x="322" y="476" font-family="Arial" font-size="22" font-weight="700" fill="#fff">1,284</text>
+</svg>

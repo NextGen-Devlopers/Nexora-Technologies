@@ -1,0 +1,15 @@
+.cta {
+  background: linear-gradient(120deg, var(--blue), #0b3fb0 60%, var(--navy));
+  color: #fff;
+  border-radius: 28px;
+  padding: 64px;
+  text-align: center;
+}
+.cta h2 {
+  color: #fff;
+}
+.cta p {
+  color: #cfe0ff;
+  margin: 14px auto 28px;
+  max-width: 560px;
+}

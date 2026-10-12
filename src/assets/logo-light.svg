@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 48" width="220" height="48">
+<defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#155EEF"/><stop offset="1" stop-color="#22D3EE"/></linearGradient></defs>
+<rect width="48" height="48" rx="12" fill="url(#g)"/>
+<path d="M14 35V13l20 22V13" fill="none" stroke="#fff" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="60" y="31" font-family="Manrope, Inter, Arial, sans-serif" font-size="24" font-weight="800" fill="#fff">Nexora</text></svg>

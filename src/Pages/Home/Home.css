@@ -1,0 +1,46 @@
+/* hero */
+.hero {
+  background:
+    radial-gradient(
+      900px 400px at 85% 0%,
+      rgba(21, 94, 239, 0.45),
+      transparent 60%
+    ),
+    var(--navy);
+  color: #fff;
+  padding: 92px 0;
+}
+.hero h1 {
+  color: #fff;
+}
+.hero .lead {
+  color: #afc0de;
+  margin: 22px 0 34px;
+}
+.hero .grid {
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  gap: 40px;
+  align-items: center;
+}
+.hero .actions {
+  display: flex;
+  gap: 14px;
+}
+.hero-sm {
+  padding: 72px 0;
+}
+.hero-sm h1 {
+  font-size: 44px;
+}
+.badge {
+  display: inline-block;
+  background: rgba(34, 211, 238, 0.12);
+  color: var(--cyan);
+  border: 1px solid rgba(34, 211, 238, 0.35);
+  padding: 6px 14px;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 700;
+  margin-bottom: 22px;
+}
