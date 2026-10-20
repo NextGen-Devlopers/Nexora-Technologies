@@ -5,11 +5,11 @@ import logo from "../../assets/logo-light.svg";
 const Footer = () => {
   return (
     <div>
-      <footer class="footer">
-        <div class="container">
-          <div class="cols">
+      <footer className="footer">
+        <div className="container">
+          <div className="cols">
             <div>
-              <a class="logo" href="home.html">
+              <a className="logo" href="home.html">
                 <img src={logo} alt="Nexora" />
               </a>
               <p>
@@ -43,7 +43,7 @@ const Footer = () => {
               </ul>
             </div>
           </div>
-          <div class="copy">
+          <div className="copy">
             <span>
               &copy; 2026 Nexora Technologies. A fictional company for a class
               project.

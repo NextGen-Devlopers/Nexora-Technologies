@@ -5,47 +5,47 @@ import logo from "../../assets/logo-light.svg";
 const Header = () => {
   return (
     <div>
-      <header class="nav">
-        <div class="container">
-          <a class="logo" href="/">
+      <header className="nav">
+        <div className="container">
+          <a className="logo" href="/Home">
             <img src={logo} alt="Company Logo" />
           </a>
           <ul>
             <li>
-              <a class="active" href="/">
+              <a className="" href="/Home">
                 Home
               </a>
             </li>
             <li>
-              <a class="" href="/Aboutus">
+              <a className="" href="/Aboutus">
                 About Us
               </a>
             </li>
             <li>
-              <a class="" href="/Services">
+              <a className="" href="/Services">
                 Services
               </a>
             </li>
             <li>
-              <a class="" href="/Projects">
+              <a className="" href="/Projects">
                 Projects
               </a>
             </li>
             <li>
-              <a class="" href="/Ourteam">
+              <a className="" href="/Ourteam">
                 Our Team
               </a>
             </li>
             <li>
-              <a class="" href="/Contactus">
+              <a className="" href="/Contactus">
                 Contact Us
               </a>
             </li>
           </ul>
-          <a class="btn btn-primary btn-sm" href="/Signup">
+          <a className="btn btn-primary btn-sm" href="/">
             Let's Talk
           </a>
-          <span class="menu">&#9776;</span>
+          <span className="menu">&#9776;</span>
         </div>
       </header>
     </div>

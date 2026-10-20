@@ -24,6 +24,10 @@
   padding: 6px 0;
   border-bottom: 2px solid transparent;
 }
+.nav ul a:hover {
+  color: #fff;
+  border-color: var(--blue);
+}
 .nav ul a.active {
   color: #fff;
   border-color: var(--cyan);

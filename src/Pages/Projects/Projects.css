@@ -1,0 +1,99 @@
+/* project cards */
+.pcard {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+.pcard img {
+  width: 100%;
+  aspect-ratio: 5/3;
+  object-fit: cover;
+}
+.pcard .body {
+  padding: 22px;
+}
+.pcard p {
+  font-size: 14.5px;
+  color: var(--muted);
+  margin: 8px 0 14px;
+}
+.cat {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--blue);
+  margin-bottom: 6px;
+}
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.tag {
+  background: #eef4ff;
+  color: #1849a9;
+  border-radius: 999px;
+  padding: 4px 12px;
+  font-size: 12.5px;
+  font-weight: 600;
+}
+
+/* filters */
+.filters {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 34px;
+}
+.filter {
+  padding: 9px 20px;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  background: #fff;
+  font-weight: 700;
+  font-size: 14px;
+  color: var(--navy);
+}
+.filter.on {
+  background: var(--blue);
+  border-color: var(--blue);
+  color: #fff;
+}
+.modal-bg {
+  position: fixed;
+  inset: 0;
+  background: rgba(11, 18, 32, 0.72);
+  display: grid;
+  place-items: center;
+  z-index: 50;
+}
+.modal {
+  background: #fff;
+  border-radius: 22px;
+  width: 880px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  overflow: hidden;
+  position: relative;
+}
+.modal img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.modal .body {
+  padding: 34px;
+}
+.modal .x {
+  position: absolute;
+  right: 16px;
+  top: 14px;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: #fff;
+  display: grid;
+  place-items: center;
+  font-weight: 800;
+  color: var(--navy);
+}
