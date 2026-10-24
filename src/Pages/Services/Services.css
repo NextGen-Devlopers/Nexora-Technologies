@@ -52,6 +52,9 @@
   line-height: 1.15;
   margin-bottom: 14px;
 }
+.services-page .sv-hero h1 {
+    color: #ffffff;
+}
 .sv-hero p { color: #c4cde0; font-size: 16px; }
 
 /* Services list */
