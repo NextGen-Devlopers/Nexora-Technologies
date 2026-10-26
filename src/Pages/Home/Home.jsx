@@ -1,5 +1,6 @@
 import React from "react";
 import "./Home.css";
+import { Link } from "react-router-dom";
 import Header from "../../Components/Header/Header";
 import Cta from "../../Components/Cta/Cta";
 import Footer from "../../Components/Footer/Footer";
@@ -34,12 +35,12 @@ const Home = () => {
               guidance.
             </p>
             <div className="actions">
-              <a className="btn btn-primary" href="/Services">
+              <Link className="btn btn-primary" to="/Services">
                 Explore our services
-              </a>
-              <a className="btn btn-ghost" href="/Contact">
+              </Link>
+              <Link className="btn btn-ghost" to="/Contactus">
                 Talk to our team
-              </a>
+              </Link>
             </div>
           </div>
           <img src={heroImage} alt="" />
@@ -61,9 +62,9 @@ const Home = () => {
               <li>Secure and mobile-ready from the first line of code</li>
               <li>Support after delivery</li>
             </ul>
-            <a className="link" href="/aboutus">
+            <Link className="link" to="/aboutus">
               Read our story
-            </a>
+            </Link>
           </div>
         </div>
       </section>
@@ -181,9 +182,9 @@ const Home = () => {
             </div>
           </div>
           <p style={{ marginTop: "28px" }}>
-            <a className="btn btn-outline" href="/Projects">
+            <Link className="btn btn-outline" to="/Projects">
               View all projects
-            </a>
+            </Link>
           </p>
         </div>
       </section>

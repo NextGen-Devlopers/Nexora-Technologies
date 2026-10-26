@@ -1,5 +1,6 @@
 import React from "react";
 import "./Cta.css";
+import { Link } from "react-router-dom";
 
 const Cta = () => {
   return (
@@ -12,9 +13,9 @@ const Cta = () => {
               Tell us about your project and we will reply within one working
               day.
             </p>
-            <a className="btn btn-cyan" href="/Contact">
+            <Link className="btn btn-cyan" to="/Contactus">
               Start a conversation
-            </a>
+            </Link>
           </div>
         </div>
       </section>

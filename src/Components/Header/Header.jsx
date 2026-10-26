@@ -1,54 +1,57 @@
-import React from "react";
+import React, { useState } from "react";
+import { Link, NavLink } from "react-router-dom";
 import "./Header.css";
 import logo from "../../assets/logo-light.svg";
 
+const links = [
+  { to: "/", label: "Home" },
+  { to: "/Aboutus", label: "About Us" },
+  { to: "/Services", label: "Services" },
+  { to: "/Projects", label: "Projects" },
+  { to: "/Ourteam", label: "Our Team" },
+  { to: "/Contactus", label: "Contact Us" },
+];
+
 const Header = () => {
+  const [open, setOpen] = useState(false);
+  const close = () => setOpen(false);
+
   return (
-    <div>
-      <header className="nav">
-        <div className="container">
-          <a className="logo" href="/Home">
-            <img src={logo} alt="Company Logo" />
-          </a>
-          <ul>
-            <li>
-              <a className="" href="/Home">
-                Home
-              </a>
+    <header className="nav">
+      <div className="container">
+        <Link className="logo" to="/" onClick={close}>
+          <img src={logo} alt="Company Logo" />
+        </Link>
+
+        <ul className={open ? "open" : ""}>
+          {links.map(({ to, label }) => (
+            <li key={to}>
+              <NavLink
+                to={to}
+                end={to === "/"}
+                className={({ isActive }) => (isActive ? "active" : "")}
+                onClick={close}
+              >
+                {label}
+              </NavLink>
             </li>
-            <li>
-              <a className="" href="/Aboutus">
-                About Us
-              </a>
-            </li>
-            <li>
-              <a className="" href="/Services">
-                Services
-              </a>
-            </li>
-            <li>
-              <a className="" href="/Projects">
-                Projects
-              </a>
-            </li>
-            <li>
-              <a className="" href="/Ourteam">
-                Our Team
-              </a>
-            </li>
-            <li>
-              <a className="" href="/Contactus">
-                Contact Us
-              </a>
-            </li>
-          </ul>
-          <a className="btn btn-primary btn-sm" href="/">
-            Let's Talk
-          </a>
-          <span className="menu">&#9776;</span>
-        </div>
-      </header>
-    </div>
+          ))}
+        </ul>
+
+        <Link className="btn btn-primary btn-sm" to="/Signup" onClick={close}>
+          Let's Talk
+        </Link>
+
+        <button
+          className="menu"
+          aria-label="Toggle navigation"
+          aria-expanded={open}
+          onClick={() => setOpen(!open)}
+        >
+          &#9776;
+        </button>
+      </div>
+    </header>
   );
 };
 

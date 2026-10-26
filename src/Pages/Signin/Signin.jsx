@@ -52,7 +52,7 @@ const Signin = () => {
       setLoading(false);
       // handle successful login
       setMessage("LOGIN SUCCESSFUL!");
-      navigate("/Home");
+      navigate("/");
       console.log(response);
     } catch (error) {
       setError("Invalid email or password");
@@ -138,7 +138,7 @@ const Signin = () => {
                 Keep me signed in
               </label>
 
-              <a href="/forgot-password">Forgot password?</a>
+              <Link to="/Signup">Forgot password?</Link>
             </div>
 
             <button
@@ -172,7 +172,7 @@ const Signin = () => {
             </div>
 
             <p className="sw">
-              New to Nexora? <a href="/Signup">Create an account</a>
+              New to Nexora? <Link to="/Signup">Create an account</Link>
             </p>
           </form>
         </div>

@@ -67,3 +67,46 @@
   padding: 9px 20px;
   font-size: 14px;
 }
+
+/* hamburger (hidden on desktop) */
+.nav .menu {
+  display: none;
+  background: none;
+  border: 0;
+  color: #fff;
+  font-size: 28px;
+  line-height: 1;
+  cursor: pointer;
+}
+
+@media (max-width: 860px) {
+  .nav .menu {
+    display: block;
+  }
+  .nav .container {
+    gap: 14px;
+  }
+  .nav .logo {
+    margin-right: auto;
+  }
+  .nav ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    gap: 0;
+    background: var(--navy);
+    padding: 8px 24px 20px;
+    border-bottom: 1px solid #1b2740;
+  }
+  .nav ul.open {
+    display: flex;
+  }
+  .nav ul li a {
+    display: block;
+    padding: 14px 0;
+    border-bottom: 1px solid #1b2740;
+  }
+}

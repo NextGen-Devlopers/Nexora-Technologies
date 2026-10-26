@@ -59,7 +59,7 @@ const Signup = () => {
         payload,
       );
       setMessage("Registration successful! Redirecting...");
-      setTimeout(() => navigate("/Home"), 1500);
+      setTimeout(() => navigate("/"), 1500);
     } catch (err) {
       console.log("Status:", err.response?.status);
       console.log("Server said:", err.response?.data);
@@ -202,7 +202,7 @@ const Signup = () => {
               <span className="btn btn-sm">GitHub</span>
             </div>
             <p className="sw">
-              Already have an account? <a href="/Signin">Sign in</a>
+              Already have an account? <Link to="/Signin">Sign in</Link>
             </p>
           </form>
         </div>
