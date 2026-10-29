@@ -1,0 +1,18 @@
+/* EDIT USER page. Reuses the card/header from UserDetails.css; extras scoped under .page-edit-user */
+.page-edit-user .ud-form{display:grid;gap:22px;margin-top:8px}
+.page-edit-user .ef{position:relative}
+.page-edit-user .ef label{position:absolute;top:-9px;left:12px;background:#fff;padding:0 6px;font-size:12px;font-weight:700;color:var(--muted);z-index:1}
+.page-edit-user .ef label i{color:#D92D20;font-style:normal}
+.page-edit-user .ef input,.page-edit-user .ef textarea{width:100%;border:1.5px solid #D0D5DD;border-radius:10px;padding:15px 16px;font:inherit;font-size:15.5px;color:var(--navy);background:#fff;resize:vertical}
+.page-edit-user .ef input:focus,.page-edit-user .ef textarea:focus{outline:none;border-color:var(--blue);box-shadow:0 0 0 4px rgba(21,94,239,.15)}
+.page-edit-user .ef input.bad,.page-edit-user .ef textarea.bad{border-color:#D92D20;background:#FEF3F2}
+.page-edit-user .ef-err{color:#B42318;font-size:13px;font-weight:600;margin-top:6px}
+.page-edit-user .ef-actions{display:flex;gap:12px;margin-top:26px;flex-wrap:wrap}
+.page-edit-user .ef-actions .ud-btn{padding:13px 24px;text-decoration:none}
+.page-edit-user .ef-actions .ud-cancel{color:var(--blue);border-color:#B2CCFF}
+.page-edit-user .ef-actions .ud-cancel:hover{background:#F5F9FF}
+.page-edit-user .ud-edit:disabled{opacity:.7;cursor:progress}
+.page-edit-user .ef-msg{border-radius:12px;padding:14px 16px;font-weight:600;font-size:14.5px;margin-bottom:6px}
+.page-edit-user .ef-msg.success{background:#ECFDF3;border:1px solid #ABEFC6;color:#067647}
+.page-edit-user .ef-msg.error{background:#FEF3F2;border:1px solid #FDA29B;color:#B42318}
+@media(max-width:560px){.page-edit-user .ef-actions .ud-btn{flex:1;justify-content:center}}

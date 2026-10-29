@@ -1,0 +1,44 @@
+/* USER DETAILS page (by :id). Scoped under .page-user-details */
+.page-user-details{padding:34px 20px 70px}
+.page-user-details .ud-wrap{max-width:720px;margin:0 auto}
+.page-user-details .ud-msg{text-align:center;padding:80px 0;color:var(--muted)}
+.page-user-details .ud-back{display:inline-flex;align-items:center;gap:8px;color:var(--blue);font-weight:700;font-size:14.5px;margin-bottom:18px}
+.page-user-details .ud-back:hover{text-decoration:underline}
+
+.page-user-details .ud-card{background:#fff;border:1px solid var(--line);border-radius:26px;overflow:hidden;box-shadow:0 24px 50px -30px rgba(11,18,32,.35)}
+.page-user-details .ud-header{text-align:center;color:#fff;padding:46px 24px 40px;background:radial-gradient(520px 240px at 88% 0%,rgba(34,211,238,.38),transparent 62%),linear-gradient(120deg,var(--navy),#0B3FB0 72%,var(--blue))}
+.page-user-details .ud-avatar{width:84px;height:84px;margin:0 auto 16px;border-radius:50%;background:#fff;color:var(--blue);display:grid;place-items:center;font-size:36px;font-weight:800;border:4px solid rgba(34,211,238,.55)}
+.page-user-details .ud-header h1{color:#fff;font-size:34px;margin-bottom:12px;overflow-wrap:anywhere}
+.page-user-details .ud-tag{display:inline-block;background:rgba(34,211,238,.14);color:var(--cyan);border:1px solid rgba(34,211,238,.4);padding:5px 14px;border-radius:999px;font-size:13px;font-weight:700}
+
+.page-user-details .ud-body{padding:34px 34px 38px}
+.page-user-details .ud-body h2{font-size:22px}
+.page-user-details .ud-sub{color:var(--muted);font-size:14.5px;margin:6px 0 22px;padding-bottom:22px;border-bottom:1px solid var(--line)}
+.page-user-details .ud-list{display:grid;gap:12px}
+.page-user-details .ud-row{display:flex;align-items:center;gap:16px;border:1px solid var(--line);border-radius:14px;padding:14px 18px;background:#fff;transition:.2s}
+.page-user-details .ud-row:hover{border-color:#B2CCFF;background:#F5F9FF}
+.page-user-details .ud-icon{flex:0 0 44px;height:44px;border-radius:12px;background:#EEF4FF;color:var(--blue);display:grid;place-items:center}
+.page-user-details .ud-row span{display:block;font-size:13px;color:var(--muted);font-weight:600}
+.page-user-details .ud-row b{display:block;color:var(--navy);font-size:16.5px;overflow-wrap:anywhere}
+
+.page-user-details .ud-actions{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:26px}
+.page-user-details .ud-btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:14px 18px;border-radius:12px;font:inherit;font-weight:700;font-size:15px;cursor:pointer;border:2px solid transparent}
+.page-user-details .ud-edit{background:var(--blue);color:#fff;box-shadow:0 8px 20px -10px rgba(21,94,239,.8)}
+.page-user-details .ud-edit:hover{background:#0F4FD1}
+.page-user-details .ud-delete{background:#fff;color:#D92D20;border-color:#FDA29B}
+.page-user-details .ud-delete:hover{background:#FEF3F2}
+
+.page-user-details .ud-modal-bg{position:fixed;inset:0;background:rgba(11,18,32,.7);display:grid;place-items:center;padding:20px;z-index:50}
+.page-user-details .ud-modal{background:#fff;border-radius:22px;padding:34px 30px;max-width:400px;width:100%;text-align:center}
+.page-user-details .ud-modal-icon{width:58px;height:58px;border-radius:50%;background:#FEF3F2;color:#D92D20;display:grid;place-items:center;margin:0 auto 16px}
+.page-user-details .ud-modal p{color:var(--muted);font-size:15px;margin:8px 0 24px}
+.page-user-details .ud-modal-actions{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.page-user-details .ud-cancel{background:#fff;color:var(--navy);border-color:#D0D5DD}
+.page-user-details .ud-danger{background:#D92D20;color:#fff}
+
+@media(max-width:560px){
+  .page-user-details{padding:22px 14px 50px}
+  .page-user-details .ud-body{padding:24px 18px 28px}
+  .page-user-details .ud-header h1{font-size:26px}
+  .page-user-details .ud-actions{grid-template-columns:1fr}
+}

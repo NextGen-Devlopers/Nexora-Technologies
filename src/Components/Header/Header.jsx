@@ -10,6 +10,7 @@ const links = [
   { to: "/Projects", label: "Projects" },
   { to: "/Ourteam", label: "Our Team" },
   { to: "/Contactus", label: "Contact Us" },
+  { to: "/users", label: "Users" },
 ];
 
 const Header = () => {

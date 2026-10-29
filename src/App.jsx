@@ -6,6 +6,9 @@ import Signup from "./Pages/Signup/Signup";
 import Signin from "./Pages/Signin/Signin";
 import Aboutus from "./Pages/Aboutus/Aboutus";
 import Services from "./Pages/Services/Services";
+import Users from "./Pages/Users/Users";
+import UserDetails from "./Pages/UserDetails/UserDetails";
+import EditUser from "./Pages/EditUser/EditUser";
 
 const App = () => {
   return (
@@ -17,6 +20,9 @@ const App = () => {
         <Route path="/Aboutus" element={<Aboutus />} />
         <Route path="/Services" element={<Services />} />
         <Route path="/Signin" element={<Signin />} />
+        <Route path="/users" element={<Users />} />
+        <Route path="/users/:id" element={<UserDetails />} />
+        <Route path="/users/:id/edit" element={<EditUser />} />
       </Routes>
     </div>
   );
