@@ -9,6 +9,8 @@ import Services from "./Pages/Services/Services";
 import Users from "./Pages/Users/Users";
 import UserDetails from "./Pages/UserDetails/UserDetails";
 import EditUser from "./Pages/EditUser/EditUser";
+import Ourteam from "./Pages/Ourteam/Ourteam";
+import Contactus from "./Pages/Contactus/Contactus";
 
 const App = () => {
   return (
@@ -19,6 +21,8 @@ const App = () => {
         <Route path="/Projects" element={<Projects />} />
         <Route path="/Aboutus" element={<Aboutus />} />
         <Route path="/Services" element={<Services />} />
+        <Route path="/Contactus" element={<Contactus />} />
+        <Route path="/Ourteam" element={<Ourteam />} />
         <Route path="/Signin" element={<Signin />} />
         <Route path="/users" element={<Users />} />
         <Route path="/users/:id" element={<UserDetails />} />
