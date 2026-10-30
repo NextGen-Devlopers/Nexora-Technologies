@@ -21,26 +21,47 @@ const Footer = () => {
             <div>
               <h4>Company</h4>
               <ul>
-                <li>About Us</li>
-                <li>Our Team</li>
-                <li>Projects</li>
+                <li>
+                  <Link to="/Aboutus">About Us</Link>
+                </li>
+                <li>
+                  <Link to="/Ourteam">Our Team</Link>
+                </li>
+                <li>
+                  <Link to="/Projects">Projects</Link>
+                </li>
               </ul>
             </div>
             <div>
               <h4>Services</h4>
               <ul>
-                <li>Software Development</li>
-                <li>Web Design</li>
-                <li>Cybersecurity</li>
-                <li>IT Consulting</li>
+                <li>
+                  <Link to="/Services">Software Development</Link>
+                </li>
+                <li>
+                  <Link to="/Services">Web Design</Link>
+                </li>
+                <li>
+                  <Link to="/Services">Cybersecurity</Link>
+                </li>
+                <li>
+                  <Link to="/Services">IT Consulting</Link>
+                </li>
               </ul>
             </div>
             <div>
               <h4>Contact</h4>
               <ul>
-                <li>hello@nexora.tech</li>
-                <li>+234 800 000 0000</li>
+                <li>
+                  <a href="mailto:hello@nexora.tech">hello@nexora.tech</a>
+                </li>
+                <li>
+                  <a href="tel:+2348000000000">+234 800 000 0000</a>
+                </li>
                 <li>Owerri, Imo State</li>
+                <li>
+                  <Link to="/Contactus">Contact form</Link>
+                </li>
               </ul>
             </div>
           </div>
