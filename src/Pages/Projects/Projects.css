@@ -1,9 +1,60 @@
 /* project cards */
 .pcard {
+  display: flex;
+  flex-direction: column;
   background: #fff;
   border: 1px solid var(--line);
   border-radius: var(--radius);
   overflow: hidden;
+  transition:
+    box-shadow 0.2s,
+    border-color 0.2s;
+}
+.pcard:hover,
+.pcard:focus-visible {
+  border-color: #b2ccff;
+  box-shadow: 0 18px 40px -22px rgba(11, 18, 32, 0.35);
+}
+.pcard:focus-visible {
+  outline: 3px solid rgba(21, 94, 239, 0.4);
+  outline-offset: 2px;
+}
+.pcard .body {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+.pcard-link {
+  margin-top: auto;
+  padding-top: 18px;
+  color: var(--blue);
+  font-weight: 700;
+  font-size: 14.5px;
+}
+.pcard-link::after {
+  content: "\2192";
+  display: inline-block;
+  margin-left: 6px;
+  transition: transform 0.2s;
+}
+.pcard:hover .pcard-link::after {
+  transform: translateX(4px);
+}
+.filter-count {
+  font-size: 14px;
+  color: var(--muted);
+  margin: -14px 0 22px;
+}
+.empty {
+  background: #fff;
+  border: 1px dashed #d0d5dd;
+  border-radius: var(--radius);
+  padding: 56px 24px;
+  text-align: center;
+}
+.empty p {
+  color: var(--muted);
+  margin: 8px 0 20px;
 }
 .pcard img {
   width: 100%;
@@ -53,6 +104,17 @@
   font-weight: 700;
   font-size: 14px;
   color: var(--navy);
+  font-family: inherit;
+  cursor: pointer;
+  transition: 0.2s;
+}
+.filter:hover {
+  border-color: #b2ccff;
+  background: #f5f9ff;
+}
+.filter:focus-visible {
+  outline: 3px solid rgba(21, 94, 239, 0.4);
+  outline-offset: 2px;
 }
 .filter.on {
   background: var(--blue);

@@ -40,7 +40,7 @@ const Header = () => {
         </ul>
 
         <Link className="btn btn-primary btn-sm" to="/Signup" onClick={close}>
-          Let's Talk
+          Get started
         </Link>
 
         <button

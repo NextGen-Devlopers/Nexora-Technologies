@@ -1,16 +1,19 @@
-import React from "react";
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import "./Projects.css";
 import Header from "../../Components/Header/Header";
 import Cta from "../../Components/Cta/Cta";
 import Footer from "../../Components/Footer/Footer";
-import shopwave from "../../assets/shopwave.svg";
-import shieldops from "../../assets/shieldops.svg";
-import logistics from "../../assets/logistics.svg";
-import eduportal from "../../assets/eduportal.svg";
-import carepoint from "../../assets/carepoint.svg";
-import paybridge from "../../assets/paybridge.svg";
+import { categories, projects } from "../../data/projects";
 
 const Projects = () => {
+  const [active, setActive] = useState("All");
+
+  const visible =
+    active === "All"
+      ? projects
+      : projects.filter((project) => project.category === active);
+
   return (
     <div>
       <Header />
@@ -25,111 +28,64 @@ const Projects = () => {
       </section>
       <section className="section">
         <div className="container">
-          <div className="filters">
-            <span className="filter on">All</span>
-            <span className="filter">Software</span>
-            <span className="filter">Web Design</span>
-            <span className="filter">Cybersecurity</span>
-            <span className="filter">IT Consulting</span>
-            <span className="filter">Digital Transformation</span>
+          <div className="filters" role="group" aria-label="Filter projects">
+            {categories.map((category) => (
+              <button
+                key={category}
+                type="button"
+                className={`filter ${active === category ? "on" : ""}`}
+                aria-pressed={active === category}
+                onClick={() => setActive(category)}
+              >
+                {category}
+              </button>
+            ))}
           </div>
-          <div className="grid-3">
-            <div className="pcard">
-              <img src={shopwave} alt="" />
-              <div className="body">
-                <div className="cat">Web Design</div>
-                <h3>ShopWave Storefront</h3>
-                <p>
-                  A fast, mobile-first e-commerce interface with product
-                  filtering and a one-page checkout.
-                </p>
-                <div className="tags">
-                  <span className="tag">React</span>
-                  <span className="tag">Stripe UI</span>
-                  <span className="tag">CSS</span>
-                </div>
-              </div>
+
+          <p className="filter-count" aria-live="polite">
+            Showing {visible.length}{" "}
+            {visible.length === 1 ? "project" : "projects"}
+            {active !== "All" && <> in {active}</>}
+          </p>
+
+          {visible.length > 0 ? (
+            <div className="grid-3">
+              {visible.map((project) => (
+                <Link
+                  key={project.slug}
+                  to={`/Projects/${project.slug}`}
+                  className="pcard"
+                >
+                  <img src={project.image} alt="" />
+                  <div className="body">
+                    <div className="cat">{project.category}</div>
+                    <h3>{project.title}</h3>
+                    <p>{project.summary}</p>
+                    <div className="tags">
+                      {project.tags.map((tag) => (
+                        <span className="tag" key={tag}>
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
+                    <span className="pcard-link">View details</span>
+                  </div>
+                </Link>
+              ))}
             </div>
-            <div className="pcard">
-              <img src={paybridge} alt="" />
-              <div className="body">
-                <div className="cat">Software</div>
-                <h3>PayBridge Mobile Banking</h3>
-                <p>
-                  A mobile banking concept with transfers, cards, and spending
-                  insights.
-                </p>
-                <div className="tags">
-                  <span className="tag">React Native</span>
-                  <span className="tag">Node.js</span>
-                  <span className="tag">REST</span>
-                </div>
-              </div>
+          ) : (
+            <div className="empty">
+              <h3>No projects in this category yet</h3>
+              <p>Pick another category or view everything we have built.</p>
+              <button
+                type="button"
+                className="btn btn-primary btn-sm"
+                onClick={() => setActive("All")}
+              >
+                Show all projects
+              </button>
             </div>
-            <div className="pcard">
-              <img src={shieldops} alt="" />
-              <div className="body">
-                <div className="cat">Cybersecurity</div>
-                <h3>ShieldOps Security Console</h3>
-                <p>
-                  A security monitoring console that turns raw alerts into clear
-                  priorities.
-                </p>
-                <div className="tags">
-                  <span className="tag">Dashboard</span>
-                  <span className="tag">Alerts</span>
-                  <span className="tag">Zero Trust</span>
-                </div>
-              </div>
-            </div>
-            <div className="pcard">
-              <img src={eduportal} alt="" />
-              <div className="body">
-                <div className="cat">Software</div>
-                <h3>EduPortal School System</h3>
-                <p>
-                  A portal for results, timetables, and fee tracking for
-                  secondary schools.
-                </p>
-                <div className="tags">
-                  <span className="tag">React</span>
-                  <span className="tag">Express</span>
-                  <span className="tag">MySQL</span>
-                </div>
-              </div>
-            </div>
-            <div className="pcard">
-              <img src={logistics} alt="" />
-              <div className="body">
-                <div className="cat">Digital Transformation</div>
-                <h3>RouteLine Logistics</h3>
-                <p>
-                  A dispatch dashboard that replaced paper waybills with live
-                  delivery tracking.
-                </p>
-                <div className="tags">
-                  <span className="tag">Automation</span>
-                  <span className="tag">Maps</span>
-                  <span className="tag">Analytics</span>
-                </div>
-              </div>
-            </div>
-            <div className="pcard">
-              <img src={carepoint} alt="" />
-              <div className="body">
-                <div className="cat">IT Consulting</div>
-                <h3>CarePoint IT Roadmap</h3>
-                <p>
-                  A three-year technology plan for a multi-branch clinic group.
-                </p>
-                <div className="tags">
-                  <span className="tag">Strategy</span>
-                  <span className="tag">Cloud</span>
-                  <span className="tag">Planning</span>
-                </div>
-              </div>
-            </div>
-          </div>
+          )}
         </div>
       </section>
 
