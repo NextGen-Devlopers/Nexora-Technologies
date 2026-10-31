@@ -39,7 +39,7 @@
 
 
 
-   /* 4. Story Section */
+   /* Story Section */
 .story-section {
     padding: 80px 0;
 }
@@ -76,7 +76,7 @@
 }
 
 
-/* 5. Mission, Vision, Values, & Choose Sections (Grids) */
+ /* Mission, Vision, Values, & Choose Sections (Grids)  */
 .grid-2 {
     display: grid;
     grid-template-columns: repeat(2, 1fr);

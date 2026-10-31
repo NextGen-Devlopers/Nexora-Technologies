@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { Link, useNavigate, useParams } from "react-router-dom";
 import { API_URL } from "../../api";
 import Icon from "../../Components/Icon";
-import "../UserDetails/UserDetails.css"; // reuse the profile card + header styles
+import "../UserDetails/UserDetails.css"; 
 import "./EditUser.css";
 
 const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
@@ -28,9 +28,9 @@ const EditUser = () => {
   const [loading, setLoading] = useState(true);
   const [loadError, setLoadError] = useState("");
   const [saving, setSaving] = useState(false);
-  const [message, setMessage] = useState(null); // { type: "success" | "error", text }
+  const [message, setMessage] = useState(null); 
 
-  // 1. Load the user and fill the form with their current details
+  //  Load the user and fill the form with their current details
   useEffect(() => {
     const getUser = async () => {
       try {
@@ -69,7 +69,7 @@ const EditUser = () => {
     return found;
   };
 
-  // 2. Send the changes to the API
+  // Send the changes to the API
   const handleSubmit = async (e) => {
     e.preventDefault();
     const found = validate();
